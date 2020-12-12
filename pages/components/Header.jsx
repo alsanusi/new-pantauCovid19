@@ -1,4 +1,4 @@
-import { Flex, Text, Box, Image, IconButton, useColorMode, SimpleGrid, Center, Grid, GridItem } from "@chakra-ui/react"
+import { Flex, Text, Box, Image, IconButton, useColorMode, Center, Grid, GridItem } from "@chakra-ui/react"
 import { MoonIcon } from '@chakra-ui/icons'
 import FormatDate from '../utils/Date';
 
@@ -11,7 +11,7 @@ function Layout() {
                 <Text fontSize={20} fontWeight="bold">
                     Pantau Covid19
                 </Text>
-                <Text fontSize="sm">{FormatDate.DateInId(new Date)}</Text>
+                <Text fontSize="sm">{FormatDate.DateOnly(new Date())}</Text>
             </Box>
         </Flex>
     )

@@ -1,5 +1,5 @@
 import { Flex, Text, Box, Image, Grid, GridItem } from "@chakra-ui/react"
-import { MoonIcon } from '@chakra-ui/icons'
+import { useEffect, useState } from 'react';
 
 function Layout({ ...props }) {
 
@@ -18,31 +18,41 @@ function Layout({ ...props }) {
     )
 }
 
-export default function CardFix() {
+function CardFix() {
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+        const loadData = async () => {
+            const res = await fetch('https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=ID')
+            const data = await res.json();
+            setData(...data);
+        }
+        loadData();
+    }, []);
 
     const cards = [
         {
             id: 1,
             title: "TOTAL KASUS",
-            amount: "200,000",
+            amount: data.totalConfirmed ? data.totalConfirmed.toLocaleString() : 0,
             icon: "https://res.cloudinary.com/alkautsars/image/upload/v1607797377/pantaucovid19/icons8-hospital-room-100_uxsiai.png"
         },
         {
             id: 2,
             title: "TOTAL SEMBUH",
-            amount: "100,000",
+            amount: data.totalRecovered ? data.totalRecovered.toLocaleString() : 0,
             icon: "https://res.cloudinary.com/alkautsars/image/upload/v1607797298/pantaucovid19/icons8-organ-transplantation-100_q3gqot.png"
         },
         {
             id: 3,
             title: "TOTAL MENINGGAL",
-            amount: "300,000",
+            amount: data.totalDeaths ? data.totalDeaths.toLocaleString() : 0,
             icon: "https://res.cloudinary.com/alkautsars/image/upload/v1607797298/pantaucovid19/icons8-skull-100_xn2jah.png"
         },
         {
             id: 4,
             title: "KASUS HARI INI",
-            amount: "600,000",
+            amount: data.dailyConfirmed ? data.dailyConfirmed.toLocaleString() : 0,
             icon: "https://res.cloudinary.com/alkautsars/image/upload/v1607797297/pantaucovid19/icons8-hospital-wheel-bed-100_orwwfc.png"
         }
     ]
@@ -62,3 +72,5 @@ export default function CardFix() {
         </Grid>
     )
 }
+
+export default CardFix;

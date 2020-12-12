@@ -5,7 +5,7 @@ import Table from './components/Table';
 
 export default function New() {
     return (
-        <Container maxW="4xl" pt="5%" >
+        <Container width={["fit-content", "fit-content", "4xl", "4xl"]} pt="5%" >
             <Stack spacing={10}>
                 <Header />
                 <Card />

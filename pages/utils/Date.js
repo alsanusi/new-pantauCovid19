@@ -12,15 +12,18 @@ class Format {
 
         return [year, month, day].join('/');
     }
-    static DateInId(value) {
-        let selectedDay = new Date(value).toLocaleString('id', {
+    static DayInWeek(value) {
+        let selectedDate = new Date(value).toLocaleString('id', {
             weekday: 'long'
         })
+        return selectedDate;
+    }
+    static DateOnly(value) {
         let selectedDate = new Intl.DateTimeFormat('en-US', {
             month: 'long',
             day: 'numeric',
         }).format(new Date(value))
-        return selectedDay + "," + " " + selectedDate;
+        return selectedDate;
     }
 }
 
