@@ -23,7 +23,7 @@ function CardFix() {
     const [data, setData] = useState([])
     useEffect(() => {
         const loadData = async () => {
-            const res = await fetch('https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=ID')
+            const res = await fetch('https://cors-anywhere.herokuapp.com/https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=ID')
             const data = await res.json();
             setData(...data);
         }
