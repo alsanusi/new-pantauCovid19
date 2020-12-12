@@ -1,14 +1,16 @@
-import { Container, SimpleGrid } from "@chakra-ui/react"
+import { Container, Stack } from "@chakra-ui/react"
 import Header from './components/Header';
+import Card from './components/Card';
 import Table from './components/Table';
 
 export default function New() {
     return (
-        <Container maxW="5xl" pt="5%" >
-            <SimpleGrid columns={1} spacing={10}>
+        <Container maxW="4xl" pt="5%" >
+            <Stack spacing={10}>
                 <Header />
+                <Card />
                 <Table />
-            </SimpleGrid>
+            </Stack>
         </Container>
     )
 }
