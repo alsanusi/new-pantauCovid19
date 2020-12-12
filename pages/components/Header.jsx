@@ -1,5 +1,6 @@
 import { Flex, Text, Box, Image, IconButton, useColorMode, SimpleGrid, Center, Grid, GridItem } from "@chakra-ui/react"
 import { MoonIcon } from '@chakra-ui/icons'
+import FormatDate from '../utils/Date';
 
 function Layout() {
 
@@ -7,10 +8,10 @@ function Layout() {
         <Flex>
             <Image src="https://res.cloudinary.com/alkautsars/image/upload/v1607532875/icon-192_njzvqa.png" alignSelf="center" alt="PantauCovid19" w={["20%", "20%", "8%", "8%"]} h={["10%", "10%", "8%", "8%"]} />
             <Box ml="5" alignSelf="center">
-                <Text fontSize={[20, 20, 30, 30]} fontWeight="bold">
+                <Text fontSize={20} fontWeight="bold">
                     Pantau Covid19
                 </Text>
-                <Text fontSize="sm">Pantau perkembangan Covid19!</Text>
+                <Text fontSize="sm">{FormatDate.DateInId(new Date)}</Text>
             </Box>
         </Flex>
     )
