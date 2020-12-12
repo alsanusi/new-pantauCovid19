@@ -5,7 +5,7 @@ import Skeleton from '../components/Skeleton/Card';
 function Layout({ ...props }) {
 
     return (
-        <Flex maxW="100%" maxW="lg" shadow="md" alignItems="center" padding="10px" borderRadius="10px">
+        <Flex maxW="100%" shadow="md" alignItems="center" padding="10px" borderRadius="10px">
             <Box w="80%" ml="5">
                 <Text fontSize={12}>
                     {props.title}

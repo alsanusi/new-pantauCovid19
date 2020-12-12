@@ -3,6 +3,6 @@ import { Skeleton } from "@chakra-ui/react"
 export default function CardSkeleton() {
 
     return (
-        <Skeleton height="25px" width="80%" mt="3" />
+        <Skeleton height="25px" width="80%" mt="3" mb="3" />
     )
 }
