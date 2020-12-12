@@ -5,7 +5,7 @@ function Layout() {
 
     return (
         <Flex>
-            <Image src="https://res.cloudinary.com/alkautsars/image/upload/v1607532875/icon-192_njzvqa.png" alignSelf="center" alt="PantauCovid19" w={["20%", "20%", "8%", "8%"]} h={["10%", "10%", "8%", "8%"]} />
+            <Image src="https://res.cloudinary.com/alkautsars/image/upload/v1607532875/icon-192_njzvqa.png" alignSelf="center" alt="PantauCovid19" w={["20%", "20%", "10%", "10%"]} h="10%" />
             <Box ml="5" alignSelf="center">
                 <Text fontSize={20} fontWeight="bold">
                     Pantau Covid19
