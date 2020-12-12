@@ -1,5 +1,6 @@
 import { Flex, Text, Box, Image, Grid, GridItem } from "@chakra-ui/react"
 import { useEffect, useState } from 'react';
+import Skeleton from '../components/Skeleton/Card';
 
 function Layout({ ...props }) {
 
@@ -10,7 +11,7 @@ function Layout({ ...props }) {
                     {props.title}
                 </Text>
                 <Text fontSize={30} fontWeight="bold">
-                    {props.amount}
+                    {props.amount ? props.amount : <Skeleton />}
                 </Text>
             </Box>
             <Image src={props.icon} w="12%" />

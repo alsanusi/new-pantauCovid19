@@ -1,6 +1,7 @@
 import { Table, TableCaption, Thead, Tr, Th, Td, Tbody } from "@chakra-ui/react"
 
-export default function New() {
+export default function CovidTable() {
+
     return (
         <Table variant="simple">
             <TableCaption><b>10 Provinsi</b> Dengan Angka Covid Tertinggi di Indonesia</TableCaption>
