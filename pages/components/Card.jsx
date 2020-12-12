@@ -10,9 +10,14 @@ function Layout({ ...props }) {
                 <Text fontSize={12}>
                     {props.title}
                 </Text>
-                <Text fontSize={30} fontWeight="bold">
-                    {props.amount ? props.amount : <Skeleton />}
-                </Text>
+                {
+                    props.amount ?
+                        <Text fontSize={30} fontWeight="bold">
+                            {props.amount}
+                        </Text>
+                        :
+                        <Skeleton />
+                }
             </Box>
             <Image src={props.icon} w="12%" />
         </Flex>

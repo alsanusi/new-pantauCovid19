@@ -1,4 +1,4 @@
-import { Stack, Skeleton } from "@chakra-ui/react"
+import { Skeleton } from "@chakra-ui/react"
 
 export default function CardSkeleton() {
 
